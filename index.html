@@ -32,7 +32,6 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -61,11 +60,11 @@
           <h1 class="title is-1 publication-title">Integrating Predictive Sampling with Constraint Handling in Reactive Dual-Arm Control</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              TianQi Zhu</a><sup>1</sup>,</span>
+              <a href="https://github.com/zhutianqi2006/">TianQi Zhu</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://jianliangmao-en.github.io/">JianLiang Mao</a><sup>2</sup>,</span>
             <span class="author-block">
-              Jun Yang</a><sup>3</sup>,
+              <a href="https://junyang198402.github.io/"> Jun Yang</a><sup>3</sup>,
             </span>
           </div>
 
@@ -97,7 +96,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -105,10 +104,10 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/zhutianqi2006/dual_arm_gpu_mpc"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -131,25 +130,25 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/11111.webm"
+            <source src="./static/videos/exp1_my_adp_15.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/222222.webm"
+            <source src="./static/videos/exp3_my_adp_15.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/444444.webm"
+            <source src="./static/videos/exp1_my_adp_30.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/55555555.webm"
+            <source src="./static/videos/exp3_my_adp_30.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -157,7 +156,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -167,39 +165,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            This paper introduces a novel framework for reactive control in dual-arm cooperative robotic systems, 
+            transitioning from traditional dual quaternion-based control to a comprehensive, integrated approach. 
+            Dual-arm systems are often challenged by high-dimensional, non-convex optimization landscapes due to intricate dynamics and inter-arm interactions.
+            Our framework synergizes advanced control strategies, including model predictive control, empirical control, null space control, and dual quaternion techniques.
+            This synthesis is tailored to enhance the system's capability in managing complex coordination tasks, such as obstacle avoidance and precise motion control. 
+            By leveraging a sampling-based model predictive control strategy, our framework seeks to circumvent the pitfalls of local optima and minimize control jitter at steady state,
+            thereby boosting both performance and reliability under dynamic and unpredictable conditions. 
+            The proposed architecture not only overcomes the computational hurdles inherent in traditional methods but also enhances reactivity and precision in dual-arm coordination tasks.
           </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+          <img src="./static/images/overall.png" alt="Abstract Image" style="max-width: 100%; height: auto;">
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -207,11 +189,10 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -221,106 +202,46 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">The capabilities of the framework we propose</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            1. Avoid External and Self-Collisions: Guarantees seamless navigation free from contact with external obstacles or the robot's own components, leveraging dynamic path planning techniques.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <p>
+            2. Prevent Joint Overextension: Actively monitors and regulates joint movements to ensure they remain within mechanical constraints, thus preserving the integrity of the system.
+          </p>
+          <p>
+            3. Synchronize Dual Arms: Seamlessly coordinates the operations of both arms to ensure synchronized and precise performance in executing complex tasks, avoiding situations like the one depicted in the image below.
+          </p>
+          <img src="./static/images/error.png" alt="Abstract Image" style="max-width: 100%; height: auto;">
+          <p>
+            4. Maintain Absolute Pose Constraints: Maintains strict angular constraints to ensure items, such as a cup filled with water on a plate, remain upright and prevent spilling.
+          <p>
+            <img src="./static/images/sketch.png" alt="Abstract Image" style="max-width: 60%; height: auto;">
+          </p>
+          </p>
+          <p>
+            5. Ensure Smooth Operation: Carefully manages the acceleration and deceleration of the robotic arms to minimize sudden movements, thereby preventing the contents, such as water in a cup, from spilling.
+          </p>
+          <p>
+            6. Enable Real-Time Computation: Facilitates rapid computational processes that are critical for immediate response and adaptation to dynamic environments and unforeseen changes.
+          </p>
+          <p>
+            7. Generalization Ability of the Controller: The controller can implement corresponding control for different types of dual arms, as demonstrated in the video sequences below and at the beginning. Different types of robotic arms can successfully perform obstacle avoidance.
+          </p>
+          <!--video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dollyzoom-stacked.mp4"
                     type="video/mp4">
-          </video>
+          </video-->
         </div>
       </div>
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
 
-        </div>
-      </div>
     </div>
     <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -343,9 +264,66 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline class="video-uniform">
+            <source src="./static/videos/sim1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline class="video-uniform">
+            <source src="./static/videos/sim2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline class="video-uniform">
+            <source src="./static/videos/sim4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline class="video-uniform">
+            <source src="./static/videos/sim6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline class="video-uniform">
+            <source src="./static/videos/sim5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline class="video-uniform">
+            <source src="./static/videos/sim3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline class="video-uniform">
+            <source src="./static/videos/sim_static1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline class="video-uniform">
+            <source src="./static/videos/sim_static2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -365,29 +343,12 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Template comes from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. 
           </p>
         </div>
       </div>

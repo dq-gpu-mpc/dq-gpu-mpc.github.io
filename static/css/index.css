@@ -155,3 +155,9 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.video-uniform {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
