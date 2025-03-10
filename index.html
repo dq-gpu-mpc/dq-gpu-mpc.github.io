@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Integrating Predictive Sampling with Constraint Handling in Reactive Dual-Arm Control">
+        content="Multi-Constraint Coordination in Dual-Arm Systems: Two-Stage Sampling Model Predictive Control for Real-Time Manipulation">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Integrating Predictive Sampling with Constraint Handling in Reactive Dual-Arm Control</title>
+  <title>Multi-Constraint Coordination in Dual-Arm Systems: Two-Stage Sampling Model Predictive Control for Real-Time Manipulation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -57,7 +57,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Integrating Predictive Sampling with Constraint Handling in Reactive Dual-Arm Control</h1>
+          <h1 class="title is-2 publication-title">
+            Multi-Constraint Coordination in Dual-Arm Systems:<br>
+            Two-Stage Sampling Model Predictive Control for Real-Time Manipulation
+          </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://github.com/zhutianqi2006/">Tianqi Zhu</a><sup>1</sup>,</span>
@@ -155,6 +158,18 @@
                     type="video/mp4">
           </video>
         </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/exp4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/exp5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </div>
@@ -168,11 +183,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This paper presents a sophisticated framework for reactive control in dual-arm cooperative robotic systems. 
-            Dual-arm manipulation presents substantial challenges due to its high-dimensional, non-convex optimization demands, further complicated by intricate dynamics and the necessity for precise, synchronized coordination. 
-            To tackle these challenges, we have incorporated sophisticated control strategies such as sampling-based model predictive control, dual quaternion control, and null space control into a cohesive framework. 
-            This integration is specifically tailored to improve the system's capability in managing complex coordination tasks, including dynamic obstacle avoidance. Our methodology effectively reduces the risks associated with local optima and decreases control jitter, thereby enhancing both performance and reliability in dynamic settings.
-            Furthermore, our architecture addresses the conventional computational hurdles associated with dual-arm coordination.
+            This paper introduces a novel framework for reactive control in dual-arm cooperative robotic systems, addressing the significant challenges posed by high-dimensional, non-convex optimization demands, intricate dynamics, and the need for precise and synchronized coordination. The core of our approach is a two-stage sampling-based model predictive control, which integrates dual quaternion control and null space control into a cohesive system. This integration enhances the system's ability to manage complex coordination tasks, such as obstacle avoidance and holding a water cup, while mitigating risks associated with local optima and reducing control jitter. Our framework not only improves performance and reliability, but also overcomes the traditional computational bottlenecks inherent in dual-arm coordination. These advancements are validated through extensive simulations and experiments, demonstrating the robustness and efficiency of our proposed methodology.
           </p>
           <img src="./static/images/overall.png" alt="Abstract Image" style="max-width: 100%; height: auto;">
         </div>
